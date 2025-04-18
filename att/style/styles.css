@@ -1,0 +1,227 @@
+/* 🌐 General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+}
+
+/* 📌 Sidebar */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: lightblue;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 8px;
+    background: whitesmoke;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    background: #ddd;
+}
+
+/* 📌 Content Area */
+.content {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+/* 📅 Calendar Container */
+.calendar-container {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#calendar {
+    height: auto !important;
+    overflow: visible;
+    width: 100%;
+    min-height: 500px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* 📅 FullCalendar Styling */
+.fc-daygrid-day-number {
+    color: #34495e;
+    font-weight: bold;
+}
+
+/* Scheduled Classes */
+.class-day .fc-daygrid-day-number {
+    background: #77dd77;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* Off Days */
+.off-day .fc-daygrid-day-number {
+    color: #888;
+}
+
+/* Today Highlight */
+.today .fc-daygrid-day-number {
+    background: #ffcc99;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* 🔽 User Dropdown */
+.user-dropdown {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.user-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s ease-in-out;
+}
+
+.dropdown-menu a:hover {
+    background: #ddd;
+}
+
+/* 🔐 Authentication Form */
+.auth-container {
+    width: 400px;
+    margin: 80px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.auth-container h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.auth-container select {
+    width: 100%;
+    padding: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    text-align: left;
+    justify-content: flex-start; /* Aligns the dropdown to the left */
+}
+
+
+.authdropdown-container {
+    display: flex; /* Use flexbox */
+    gap: 10px; /* Space between dropdowns */
+}
+        
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.auth-container button:hover {
+    background: #2980b9;
+}
+
+.auth-container a {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+/*Shedule class page*/
+.shedule-container {
+    margin-left: 250px; /* Shift content to the right */
+    padding: 20px;
+    width: calc(100% - 270px);
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+        padding: 15px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+
+    .calendar-container {
+        width: 100%;
+    }
+
+    .auth-container {
+        width: 90%;
+    }
+}
